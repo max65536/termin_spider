@@ -3,6 +3,7 @@ from scrapy.spiders import Spider
 from scrapy.utils.response import open_in_browser
 from scrapy import Request
 from tkinter import messagebox
+import datetime
 import requests
 from IPython import embed
 
@@ -52,8 +53,10 @@ class ScanSpider(Spider):
         yield Request(next_url, headers=self.headers, cookies=self.cookie_dict1, callback=self.parse_step2)
 
         error = response.xpath('//h1[@class="error"]').extract()
-        data = response.xpath('//div[@id="inhalt"]/h1').extract()
-        print("---------------------------data-----------------------------\n", data)
+        data = response.xpath('//div[@id="inhalt"]/h1/text()').extract()
+        # print("---------------------------data-----------------------------\n", data)
+        print(datetime.datetime.now())
+        print(data)
 
     def parse_step2(self,response):
         # with open("response.html", "w") as f:
@@ -62,14 +65,16 @@ class ScanSpider(Spider):
         self.cookie_dict2["TVWebSession"] = self.cookie.split()[0][13:-1].decode('utf-8')
         next_url = "https://termine.staedteregion-aachen.de/auslaenderamt/suggest?cnc-145=1&loc=16"
         yield Request(next_url, headers=self.headers, cookies=self.cookie_dict2, callback=self.parse_step3)
-        data = response.xpath('//div[@id="inhalt"]/h1').extract()
-        print("---------------------------data-----------------------------\n", data)
+        data = response.xpath('//div[@id="inhalt"]/h1/text()').extract()
+        # print("---------------------------data-----------------------------\n", data)
+        print(data)
 
     def parse_step3(self, response):        
         error = response.xpath('//h1[@class="error"]').extract()
         data = response.xpath('//div[@id="inhalt"]/h1/text()').extract()
-        print("---------------------------data-----------------------------\n", data)
-        print("---------------------------error-----------------------------\n", error)
+        # print("---------------------------data-----------------------------\n", data)
+        # print("---------------------------error-----------------------------\n", error)
+        print(data, error)
         with open("response.html", "w") as f:
             f.write(response.text)
         if "Keine" in data[0]:

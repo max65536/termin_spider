@@ -12,6 +12,8 @@ BOT_NAME = 'termin_spider'
 SPIDER_MODULES = ['termin_spider.spiders']
 NEWSPIDER_MODULE = 'termin_spider.spiders'
 
+LOG_LEVEL = "WARNING"
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'termin_spider (+http://www.yourdomain.com)'
