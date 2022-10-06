@@ -1,86 +1,77 @@
 <!DOCTYPE html>
 <html lang="de" xml:lang="de" xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-	<meta charset="UTF-8">
-	<title>Termine Städteregion Aachen - Ausländerbehörde -</title>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="styles/web/basis/css/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="styles/web/basis/css/fontawesome/css/font-awesome.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <title>Termine Städteregion Aachen - Ausländerbehörde -</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/web/basis/css/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/web/basis/css/fontawesome/css/font-awesome.min.css">
 
-	<link rel="stylesheet" href="styles/web/basis/css/leaflet.css" />
-	<script src="app/js/leaflet.js"></script>
+        <link rel="stylesheet" href="styles/web/basis/css/leaflet.css"/>
+        <script src="app/js/leaflet.js"></script>
 
-	<script type="text/javascript" src="app/js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="app/js/jquery-3.6.0.min.js"></script>
 
-	<link rel="stylesheet" href="styles/web/basis/css/jquery-ui_1.13.1.css">
-	<script src="app/js/jquery-ui_1.13.1.min.js"></script>
+        <link rel="stylesheet" href="styles/web/basis/css/jquery-ui_1.13.1.css">
+        <script src="app/js/jquery-ui_1.13.1.min.js"></script>
 
-	<link rel="stylesheet" href="styles/web/basis/css/Font.css">
-	<link rel="stylesheet" href="styles/web/basis/css/tvo.css?cache_buster=1658740077" type="text/css" />
-	<link rel="stylesheet" href="styles/web/tevis011/css/custom.css?cache_buster=1658392733" type="text/css" />
-	<!--###KONTRASTSTYLE###-->
+        <link rel="stylesheet" href="styles/web/basis/css/Font.css">
+        <link rel="stylesheet" href="styles/web/basis/css/tvo.css?cache_buster=1658740077" type="text/css" />
+        <link rel="stylesheet" href="styles/web/tevis011/css/custom.css?cache_buster=1658392733" type="text/css" />
+        <!--###KONTRASTSTYLE###-->
 
-	<script type="text/javascript" src="styles/web/basis/css/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="app/js/tvweb.js?cache_buster=1658740077"></script>
-	<script type="text/javascript" src="scripts/web/basis/javascript/basis.js"></script>
-	<script type="text/javascript" src="scripts/web/basis/javascript/calendar.js"></script>
-	<script type="text/javascript" src="app/js/js.cookie.js"></script>
+        <script type="text/javascript" src="styles/web/basis/css/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="app/js/tvweb.js?cache_buster=1658740077"></script>
+        <script type="text/javascript" src="scripts/web/basis/javascript/basis.js"></script>
+        <script type="text/javascript" src="scripts/web/basis/javascript/calendar.js"></script>
+        <script type="text/javascript" src="app/js/js.cookie.js"></script>
 
-	<link rel="icon" href="images/favicon.gif" type="image/x-icon" />
+        <link rel="icon" href="images/favicon.gif" type="image/x-icon" />
 
-	<script src="app/js/customA11ySelect.js"></script>
-</head>
+        <script src="app/js/customA11ySelect.js"></script>
+    </head>
 
-<body class="TEVISWEB">
+    <body class="TEVISWEB">
 
-	<div id="cookie_msg">
-		<span tabindex="1" style="">Diese Website verwendet Cookies - nähere Informationen dazu und zu Ihren Rechten als Benutzer finden Sie in unserer Datenschutzerklärung.</span>
-		<input type="button" id="cookie_msg_btn_yes" class="btn" value="Akzeptieren" aria-label="Cookie-Verwendung akzeptieren" />
-		<input type="button" id="cookie_msg_btn_no" class="btn" value="Ablehnen" aria-label="Cookie-Verwendung ablehnen" />
-		<a href="#" onclick="showFooterModals('privacy', $(this).text())">Datenschutzerklärung</a>
-	</div>
-
-	<nav role="navigation" class="mainheader">
-		<div style="margin-top:-17px;">
-			<a class="unsichtbar" href="#inhalt" style="margin-top:-10px;">Hauptregion der Seite anspringen</a>
-			<nav aria-label="Einstellungen" role="navigation" aria-labelledby="Einstellungen-Label">
-				<p id="Einstellungen-Label" class="menuEinstellung">Einstellungen</p>
-				<ul id="exTest" class="disclosure-nav">
-					<li>
-						<button class="NavigationButton nomenu" aria-label="Kontrast an" title="Kontrast an" languageAN="Kontrast an" languageAUS="Kontrast aus" style="height: 100% !important;">
+        <div id="cookie_msg">
+            <span tabindex="1" style="">Diese Website verwendet Cookies - nähere Informationen dazu und zu Ihren Rechten als Benutzer finden Sie in unserer Datenschutzerklärung.</span>
+            <input type="button" id="cookie_msg_btn_yes" class="btn" value="Akzeptieren" aria-label="Cookie-Verwendung akzeptieren" />
+            <input type="button" id="cookie_msg_btn_no" class="btn" value="Ablehnen" aria-label="Cookie-Verwendung ablehnen" />
+            <a href="#" onclick="showFooterModals('privacy', $(this).text())">Datenschutzerklärung</a>
+        </div>
+        
+             <nav role="navigation" class="mainheader">
+                <div style="margin-top:-17px;">
+                <a class="unsichtbar" href="#inhalt" style="margin-top:-10px;">Hauptregion der Seite anspringen</a><nav aria-label="Einstellungen" role="navigation" aria-labelledby="Einstellungen-Label"><p id="Einstellungen-Label" class="menuEinstellung" >Einstellungen</p><ul id="exTest" class="disclosure-nav">
+<li>
+<button class="NavigationButton nomenu" aria-label="Kontrast an" title="Kontrast an" languageAN="Kontrast an" languageAUS="Kontrast aus" style="height: 100% !important;">
 <img  alt="Icon Kontrast" aria-hidden="true" focusable="false" src="styles/web/basis/images/contrast_low_black.svg" width="29px" >
 <img  alt="Icon Kontrast" aria-hidden="true" focusable="false" src="styles/web/basis/images/contrast_low_white.svg" width="29px" >
 </button>
 
-					</li>
-					<li>
-						<button class="languageSelect" aria-expanded="false" aria-controls="id_lang_menu" aria-label="Sprachwahl" title="Sprachwahl">
+</li>
+<li>
+<button class="languageSelect" aria-expanded="false" aria-controls="id_lang_menu" aria-label="Sprachwahl" title="Sprachwahl">
 <img alt="Icon Sprachwahl" aria-hidden="true" focusable="false" src="styles/web/basis/images/language_black.svg" width="29px">
 <img alt="Icon Sprachwahl" aria-hidden="true" focusable="false" src="styles/web/basis/images/language_white.svg" width="29px">
 </button>
-						<ul id="id_lang_menu" style="display:none;">
-							<li role="menuitem">
-								<label class="contrast" role="lang_select"><a aria-label="Sprachwahl vereinfachte Sprache" href="https://termine.staedteregion-aachen.de/auslaenderamt/?lang=de_VS&rs" class="lang_link">vereinfachte Sprache</a></label>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</nav>
+<ul id="id_lang_menu" style="display:none;">
+<li role="menuitem"><label class="contrast" role="lang_select"><a aria-label="Sprachwahl vereinfachte Sprache" href="https://termine.staedteregion-aachen.de/auslaenderamt/?lang=de_VS&rs" class="lang_link">vereinfachte Sprache</a></label></li></ul></li></ul></nav>
+                </div>
+                </nav>
 	<div id="banner">
 	</div>
-	<!--##LANGUAGE_MENU##-->
-	<!--##CORONA_LOGOUT##-->
-	<main class="container wrapper">
+                <!--##LANGUAGE_MENU##-->
+            <!--##CORONA_LOGOUT##-->
+        <main class="container wrapper">
 
 
-
-		<script type="application/javascript">
-			$(document).ready(function() {
+            
+        <script type="application/javascript">
+            $(document).ready(function() {
                 //links unten rechts in der karte nicht mit tastatur erreichbar:
                 $(".leaflet-bottom.leaflet-right").find("a").attr("tabindex", "-1");
                 //elemente unten rechts in der karte nicht für screenreader sichtbar
@@ -150,74 +141,42 @@
                     }
                 });
             });
-		</script>
+        </script>
+    
+<div class="content content--mdt">
+            <div role="banner" class="wizard">
+                <div class="wizard-inner">
+                
+                    <ul class="nav nav-tabs" role="tablist" aria-hidden="true">
+                        <li role="presentation" class="done">
+                            <span class="round-tab" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="" data-trigger="hover">1</span>
+                        </li>
+                        <li role="presentation" class="done">
+                            <span class="round-tab" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="" data-trigger="hover">2</span>
+                        </li>
+                        <li role="presentation" class="active">
+                            <span class="round-tab" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Keine Terminvorschläge verfügbar" data-trigger="hover">3</span>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <span class="round-tab" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="" data-trigger="hover">4</span>
+                        </li>
+                        <li role="presentation" class="disabled">
+                            <span class="round-tab" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="" data-trigger="hover">5</span>
+                        </li>
+                    </ul>
+                
+                    <div id="inhalt">
+                        <h1 > Schritt 3: Keine Terminvorschläge verfügbar </h1>
+                                <div id="info_accordion" aria-label="Informationsbox">
+                            <h3> Übersicht zu Ihrem Termin</h3>
+                            <div><div class='infobox_row'><div class='infobox_col1'><span class='infobox_text'> Funktionseinheit:</span></div><div class='infobox_col2'>Aufenthaltsangelegenheiten</div></div><div class='infobox_row'><div class='infobox_col1'><span class='infobox_text'> Anliegen:</span></div><div class='infobox_col2'><ul id="info_box_cnc_list"><li>1 <span aria-label="Mal">x</span> RWTH Studenten</li></ul></div></div><div class='infobox_row'><div class='infobox_col1'><span class='infobox_text'> Standort:</span></div><div class='infobox_col2'><span class='visuallyhidden'> noch nicht gesetzt</span></div></div><div class='infobox_row'><div class='infobox_col1'><span class='infobox_text'> Termin:</span></div><div class='infobox_col2'><span class='visuallyhidden'> noch nicht gesetzt</span></div></div><div class='infobox_row'><div class='infobox_col1'><span class='infobox_text'> Persönliche Daten:</span></div><div class='infobox_col2'><span class='visuallyhidden'> noch nicht gesetzt</span></div></div></div><!--ende div infobox items-->
+                        </div>
+                    </div><!--ende div inhalt-->
+                </div><!-- ende div wizard-inner-->
+            </div><!--ende div wizard-->
 
-		<div class="content content--mdt">
-			<div role="banner" class="wizard">
-				<div class="wizard-inner">
-
-					<ul class="nav nav-tabs" role="tablist" aria-hidden="true">
-						<li role="presentation" class="done">
-							<span class="round-tab" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="" data-trigger="hover">1</span>
-						</li>
-						<li role="presentation" class="done">
-							<span class="round-tab" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="" data-trigger="hover">2</span>
-						</li>
-						<li role="presentation" class="active">
-							<span class="round-tab" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Keine Terminvorschläge verfügbar" data-trigger="hover">3</span>
-						</li>
-						<li role="presentation" class="disabled">
-							<span class="round-tab" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="" data-trigger="hover">4</span>
-						</li>
-						<li role="presentation" class="disabled">
-							<span class="round-tab" aria-hidden="true" data-container="body" data-toggle="popover" data-placement="bottom" data-content="" data-trigger="hover">5</span>
-						</li>
-					</ul>
-
-					<div id="inhalt">
-						<h1> Schritt 3: Keine Terminvorschläge verfügbar </h1>
-						<div id="info_accordion" aria-label="Informationsbox">
-							<h3> Übersicht zu Ihrem Termin</h3>
-							<div>
-								<div class='infobox_row'>
-									<div class='infobox_col1'><span class='infobox_text'> Funktionseinheit:</span></div>
-									<div class='infobox_col2'>Aufenthaltsangelegenheiten</div>
-								</div>
-								<div class='infobox_row'>
-									<div class='infobox_col1'><span class='infobox_text'> Anliegen:</span></div>
-									<div class='infobox_col2'>
-										<ul id="info_box_cnc_list">
-											<li>1 <span aria-label="Mal">x</span> RWTH Studenten</li>
-										</ul>
-									</div>
-								</div>
-								<div class='infobox_row'>
-									<div class='infobox_col1'><span class='infobox_text'> Standort:</span></div>
-									<div class='infobox_col2'><span class='visuallyhidden'> noch nicht gesetzt</span>
-									</div>
-								</div>
-								<div class='infobox_row'>
-									<div class='infobox_col1'><span class='infobox_text'> Termin:</span></div>
-									<div class='infobox_col2'><span class='visuallyhidden'> noch nicht gesetzt</span>
-									</div>
-								</div>
-								<div class='infobox_row'>
-									<div class='infobox_col1'><span class='infobox_text'> Persönliche Daten:</span>
-									</div>
-									<div class='infobox_col2'><span class='visuallyhidden'> noch nicht gesetzt</span>
-									</div>
-								</div>
-							</div>
-							<!--ende div infobox items-->
-						</div>
-					</div>
-					<!--ende div inhalt-->
-				</div><!-- ende div wizard-inner-->
-			</div>
-			<!--ende div wizard-->
-
-			<script>
-				$(document).ready(function(){
+            <script>
+                $(document).ready(function(){
                     var title = document.title.split("Schritt");
                     var titleNeu = title[0] + " - " + $("h1:not(#Einstellungen-Label)").html();
                     document.title= titleNeu;
@@ -231,198 +190,67 @@
                         $('html').attr('xml:lang', 'de');
                     }
                 });
-			</script>
+            </script>
 
-			<br>
-			<div class="header">
-				<h1>Standort:</h1>
-			</div>
-			<nav aria-label="Sprunglink" role="navigation" tabindex="-1" style=" margin-top:-10px">
-				<p><a class="unsichtbar" href=#zurueck>Zurück-Button anspringen</a></p>
-			</nav>
-			<div class="locationOn">
-				<div class="info">
-					<p class="hint">Für Ihre Auswahl steht folgender Standort zur Verfügung:</p>
-				</div>
-				<div id="loc_map">
-					<img src="https://termine.staedteregion-aachen.de/auslaenderamt/styles/web/basis/images/loader.gif" id="map_loading" alt="loading-icon"></div>
-					<script>
-						showMap({"0":{"0":"Templergraben 57","1":"52062","2":"Aachen","3":"Ausl\u00e4nderamt Aachen - Au\u00dfenstelle RWTH","4":"16","5":"50.77858","6":"6.07867"}}, "suggest");
-					</script>
-					<div id="map_legend">
-						<div class="map_legend_entry"><img class="map_legend_icon" aria-hidden="true" src="styles/web/basis/images/marker-icon-gold.png" alt="gelber Pin für Ihren aktuellen Standort">
-							<p aria-hidden="true" class="map_legend_text_2_lines">Ihr aktueller
-								Standort<br>(kann ggf. abweichen)</p>
-						</div>
-						<div class="map_legend_entry"><img class="map_legend_icon" aria-hidden="true" src="styles/web/basis/images/marker-icon-red.png" alt="roter Pin für ausgewählten Standort">
-							<p aria-hidden="true" class="map_legend_text">Ausgewählter Standort</p>
-						</div>
-						<div class="map_legend_entry"><img class="map_legend_icon" aria-hidden="true" src="styles/web/basis/images/marker-icon-blue.png" alt="blauer Pin für alternativen Standort">
-							<p aria-hidden="true" class="map_legend_text">Alternativer Standort</p>
-						</div>
-					</div>
-					<p style="color: #000;" id="selectLocation">
-						<strong>Ausländeramt Aachen - Außenstelle RWTH</strong><br/>
+<br><div class="header"><h1>Standort:</h1></div>
+				    <nav aria-label="Sprunglink" role="navigation" tabindex="-1" style=" margin-top:-10px"><p><a class="unsichtbar" href=#zurueck>Zurück-Button anspringen</a></p></nav>
+                    <div class="locationOn">
+                        <div class="info">
+                            <p class="hint">Für Ihre Auswahl steht folgender Standort zur Verfügung:</p>
+                        </div>
+                        <div id="loc_map"><img src="https://termine.staedteregion-aachen.de/auslaenderamt/styles/web/basis/images/loader.gif" id="map_loading" alt="loading-icon"></div><script>showMap({"0":{"0":"Templergraben 57","1":"52062","2":"Aachen","3":"Ausl\u00e4nderamt Aachen - Au\u00dfenstelle RWTH","4":"16","5":"50.77858","6":"6.07867"}}, "suggest");</script><div id="map_legend"><div class="map_legend_entry"><img class="map_legend_icon" aria-hidden="true" src="styles/web/basis/images/marker-icon-gold.png" alt="gelber Pin für Ihren aktuellen Standort"><p aria-hidden="true" class="map_legend_text_2_lines">Ihr aktueller Standort<br>(kann ggf. abweichen)</p></div><div class="map_legend_entry"><img class="map_legend_icon" aria-hidden="true" src="styles/web/basis/images/marker-icon-red.png" alt="roter Pin für ausgewählten Standort"><p aria-hidden="true" class="map_legend_text">Ausgewählter Standort</p></div><div class="map_legend_entry"><img class="map_legend_icon" aria-hidden="true" src="styles/web/basis/images/marker-icon-blue.png" alt="blauer Pin für alternativen Standort"><p aria-hidden="true" class="map_legend_text">Alternativer Standort</p></div></div>
+                        <p style="color: #000;" id="selectLocation">
+                            <strong>Ausländeramt Aachen - Außenstelle RWTH</strong><br/>
                             Templergraben 57<br/>
                             52062 Aachen
-						<br/><br><b>Standortinformation:</b><br/> <span id="location_infotext"><div>
+                            <br/><br><b>Standortinformation:</b><br/> <span id="location_infotext"><div>
 	Bitte kommen Sie ca. 10 Minuten vor der gebuchten Zeit.</div>
 <div>
 	Bitte melden Sie sich auf der 4. Etage in den Zimmern 421/422 an.</div>
 </span>
-					</p>
-					<hr>
-					<input type="hidden" id="location_details_hidden" value="Ausländeramt Aachen - Außenstelle RWTH, Templergraben 57, 52062 Aachen" />
+                        </p>
+                        <hr>
+                        <input type="hidden" id="location_details_hidden" value="Ausländeramt Aachen - Außenstelle RWTH, Templergraben 57, 52062 Aachen" />
                     </div>
-					<div class="row">
-						<h1>Kein freier Termin verfügbar</h1>
-						<span>Für die aktuelle Anliegenauswahl ist leider kein Termin verfügbar. Neue Termine werden täglich freigeschaltet. Bitte versuchen Sie die Terminbuchung zu einem späteren Zeitpunkt erneut.</span>
-					</div>
-					<hr />
-					<div style="margin-top: 20px; display: inline-block; width: 100%;">
-						<input class="sel_button btn btn-primary pull-left fifty " type="button"  onClick="historyGoBack('');" title="Zurück" alt="Zurück" id="zurueck" aria-label="Zurück" value="Zurück"></div>
-					</div>
+<div class="row"><h1>Kein freier Termin verfügbar</h1><span>Für die aktuelle Anliegenauswahl ist leider kein Termin verfügbar. Neue Termine werden täglich freigeschaltet. Bitte versuchen Sie die Terminbuchung zu einem späteren Zeitpunkt erneut.</span></div><hr/>
+<div style="margin-top: 20px; display: inline-block; width: 100%;"><input class="sel_button btn btn-primary pull-left fifty " type="button"  onClick="historyGoBack('');" title="Zurück" alt="Zurück" id="zurueck" aria-label="Zurück" value="Zurück"></div>
+</div>
 
-					<div id="TevisDialog" class="modal fade" tabindex="-1" role="dialog" aria-label="Hinweisfenster"
-						data-backdrop="static" data-keyboard="false">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" id="closeButton" class="close" data-dismiss="modal" aria-label="Hinweisfenster schließen" title="Hinweisfenster schließen"><span aria-hidden="true">&times;</span></button>
-									<h1 class="modal-title" role="heading">Hinweis</h1>
-								</div>
-								<div class="modal-body"></div>
-								<div class="modal-footer">
-									<button type="button" class="sel_button btn btn-primary pull-right fifty btn-ok" data-dismiss="modal">Ja</button>
-									<button type="button" class="sel_button btn btn-primary pull-left fifty btn-abort" data-dismiss="modal">Nein</button>
-								</div>
-							</div><!-- /.modal-content -->
-						</div><!-- /.modal-dialog -->
-					</div><!-- /.modal -->
+            <div id="TevisDialog" class="modal fade" tabindex="-1" role="dialog" aria-label="Hinweisfenster" data-backdrop="static" data-keyboard="false" >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" id="closeButton" class="close" data-dismiss="modal" aria-label="Hinweisfenster schließen" title="Hinweisfenster schließen"><span aria-hidden="true">&times;</span></button>
+                            <h1 class="modal-title" role="heading">Hinweis</h1>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="sel_button btn btn-primary pull-right fifty btn-ok" data-dismiss="modal">Ja</button>
+                            <button type="button" class="sel_button btn btn-primary pull-left fifty btn-abort" data-dismiss="modal">Nein</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        
 
+            <footer role="footer" id="footer" class="tvweb_form">
+                <nav class="nav navHelp" role="navigation">
+                    <div id="footer_dialog" class="modal fade" tabindex="-1" role="dialog" aria-label="Hinweisfenster"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" id="closeButton" data-dismiss="modal" aria-label="Hinweisfenster schließen" title="Hinweisfenster schließen"><span aria-hidden="true">&times;</span></button><h1 class="modal-title" role="heading">Titel</h1></div><div class="modal-body"><div id="modal_help"><ol style="padding-left: 15px;"><li><h3>Auswahl der Behörde</h3><p>Zunächst wählen Sie bitte die gewünschte Behörde aus den angebotenen Behörden aus.</p></li><li><h3>Auswahl des Anliegens</h3><p>Anschließend erhalten Sie die zur Behörde angebotenen Anliegen angezeigt, wählen Sie entsprechend aus.</p></li><li><h3>Terminauswahl</h3><p>Anschließend wird ein Kalender eingeblendet, aus dem die freien Zeiten hervorgehen. Rot gekennzeichnete Bereiche bedeuten, dass zu diesen Zeiten keine Termin vergeben werden können. Markieren Sie dann bitte ihren Terminwunsch mit einem Mausklick im Kalender. Der Bereich wird dann grün dargestellt. Die Angaben zum Terminwunsch werden unterhalb der Überschrift textlich angezeigt.<br> Je nach Konfiguration kann es auch sein, dass anstatt des Kalenders, eine Seite mit Terminvorschlägen angezeigt wird. Die Vorschläge lassen sich nach Datum und Wochentag filtern. Bei Auswahl eines Termins werden Sie direkt auf die nächste Seite weitergeleitet.</p></li><li><h3>Persönliche Daten</h3><p>Es erscheint die Eingabemaske für ihre persönlichen Daten. Alle mit einem Sternchen (*) gekennzeichneten Felder sind Pflichtfelder und müssen ausgefüllt werden. Es besteht die Möglichkeit für spätere Anfragen die persönlichen Daten auf Ihrem PC zu speichern, eine erneute Angabe dieser Daten bei zukünftigen Anfragen ist dann nicht mehr erforderlich, abgesehen von evtl. Änderungen die dann erfolgen können wenn die neue Anfrage erzeugt wird. Setzen Sie dazu bitte einen Haken in das Feld Persönliche Daten für zukünftige Anfragen speichern. Bestätigen Sie die Anfrage, sofern nötig, nach der Eingabe des Sicherheitscodes, mit einem Klick auf 'Weiter'.</p></li><li><h3>Terminübersicht</h3><p>Abschließend erhalten Sie eine Übersicht über ihren ausgewählten Termin und können einen weiteren Termin reservieren.</p></li><li><h3>Bestätigungsmail</h3><p>Sie erhalten anschließend eine E-Mail in der Sie einen Bestätigungslink anklicken müssen. Erst nach der Bestätigung wird Ihr Termin an die Behörde übertragen.</p></li><li><h3>Rückmeldung Sachbearbeiter</h3><p>Ihre Anfrage wird dann in der Behörde geprüft und Sie erhalten eine weitere E-Mail, diesmal direkt vom Sachbearbeiter. Diese Mail enhält dann auch die Angaben zu ggf. beizubringenden Unterlagen.</p></li></ol></div><div id="modal_imprint"><h3>Link zu dem Impressum der StädteRegion Aachen:<br>
+<a href="https://www.staedteregion-aachen.de/de/navigation/aemter/strassenverkehrsamt-a-36/fao-impressum-1" target="_blank">
+Impressum der StädteRegion Aachen</a></h3></div><div id="modal_privacy"><h3>Link zu der Datenschutzerklärung der StädteRegion Aachen:<br>
+<a href="https://www.staedteregion-aachen.de/de/datenschutz-1" target="_blank">
+Datenschutzerklärung der StädteRegion Aachen</a></h3></div><div id="modal_accessibility"><h3>Die Erklärung wird erst mit dem Abschluss des BITV-Tests erstellt und dann an dieser Stelle angezeigt.</h3></div><div id="modal_session"><p>Ihre Sitzung läuft in einer Minute ab.</p><p>Für eine Verlängerung schließen Sie bitte dieses Fenster in den nächsten 60 Sekunden.</p></div></div><div class="modal-footer"><button type="button" class="sel_button btn btn-primary fifty btn-ok" data-dismiss="modal">Schliessen</button></div></div></div></div>
 
-					<footer role="footer" id="footer" class="tvweb_form">
-						<nav class="nav navHelp" role="navigation">
-							<div id="footer_dialog" class="modal fade" tabindex="-1" role="dialog"
-								aria-label="Hinweisfenster">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" id="closeButton" data-dismiss="modal" aria-label="Hinweisfenster schließen" title="Hinweisfenster schließen"><span aria-hidden="true">&times;</span></button>
-											<h1 class="modal-title" role="heading">Titel</h1>
-										</div>
-										<div class="modal-body">
-											<div id="modal_help">
-												<ol style="padding-left: 15px;">
-													<li>
-														<h3>Auswahl der Behörde</h3>
-														<p>Zunächst wählen Sie bitte die gewünschte Behörde aus den
-															angebotenen Behörden aus.</p>
-													</li>
-													<li>
-														<h3>Auswahl des Anliegens</h3>
-														<p>Anschließend erhalten Sie die zur Behörde angebotenen
-															Anliegen angezeigt, wählen Sie entsprechend aus.</p>
-													</li>
-													<li>
-														<h3>Terminauswahl</h3>
-														<p>Anschließend wird ein Kalender eingeblendet, aus dem die
-															freien Zeiten hervorgehen. Rot gekennzeichnete Bereiche
-															bedeuten, dass zu diesen Zeiten keine Termin vergeben werden
-															können. Markieren Sie dann bitte ihren Terminwunsch mit
-															einem Mausklick im Kalender. Der Bereich wird dann grün
-															dargestellt. Die Angaben zum Terminwunsch werden unterhalb
-															der Überschrift textlich
-															angezeigt.<br> Je nach Konfiguration kann es auch sein, dass anstatt des Kalenders, eine Seite mit Terminvorschlägen angezeigt wird. Die Vorschläge lassen sich nach Datum und Wochentag filtern. Bei Auswahl eines Termins werden Sie direkt auf die nächste Seite weitergeleitet.</p>
-													</li>
-													<li>
-														<h3>Persönliche Daten</h3>
-														<p>Es erscheint die Eingabemaske für ihre persönlichen Daten.
-															Alle mit einem Sternchen (*) gekennzeichneten Felder sind
-															Pflichtfelder und müssen ausgefüllt werden. Es besteht die
-															Möglichkeit für spätere Anfragen die persönlichen Daten auf
-															Ihrem PC zu speichern, eine erneute Angabe dieser Daten bei
-															zukünftigen Anfragen ist dann nicht mehr erforderlich,
-															abgesehen von evtl. Änderungen die dann erfolgen können wenn
-															die neue Anfrage erzeugt wird. Setzen Sie dazu bitte einen
-															Haken in das Feld Persönliche Daten für zukünftige Anfragen
-															speichern. Bestätigen Sie die Anfrage, sofern nötig, nach
-															der Eingabe des Sicherheitscodes, mit einem Klick auf
-															'Weiter'.</p>
-													</li>
-													<li>
-														<h3>Terminübersicht</h3>
-														<p>Abschließend erhalten Sie eine Übersicht über ihren
-															ausgewählten Termin und können einen weiteren Termin
-															reservieren.</p>
-													</li>
-													<li>
-														<h3>Bestätigungsmail</h3>
-														<p>Sie erhalten anschließend eine E-Mail in der Sie einen
-															Bestätigungslink anklicken müssen. Erst nach der Bestätigung
-															wird Ihr Termin an die Behörde übertragen.</p>
-													</li>
-													<li>
-														<h3>Rückmeldung Sachbearbeiter</h3>
-														<p>Ihre Anfrage wird dann in der Behörde geprüft und Sie
-															erhalten eine weitere E-Mail, diesmal direkt vom
-															Sachbearbeiter. Diese Mail enhält dann auch die Angaben zu
-															ggf. beizubringenden Unterlagen.</p>
-													</li>
-												</ol>
-											</div>
-											<div id="modal_imprint">
-												<h3>Link zu dem Impressum der StädteRegion Aachen:<br>
-													<a href="https://www.staedteregion-aachen.de/de/navigation/aemter/strassenverkehrsamt-a-36/fao-impressum-1"
-														target="_blank">
-														Impressum der StädteRegion Aachen</a></h3>
-											</div>
-											<div id="modal_privacy">
-												<h3>Link zu der Datenschutzerklärung der StädteRegion Aachen:<br>
-													<a href="https://www.staedteregion-aachen.de/de/datenschutz-1"
-														target="_blank">
-														Datenschutzerklärung der StädteRegion Aachen</a></h3>
-											</div>
-											<div id="modal_accessibility">
-												<h3>Die Erklärung wird erst mit dem Abschluss des BITV-Tests erstellt
-													und dann an dieser Stelle angezeigt.</h3>
-											</div>
-											<div id="modal_session">
-												<p>Ihre Sitzung läuft in einer Minute ab.</p>
-												<p>Für eine Verlängerung schließen Sie bitte dieses Fenster in den
-													nächsten 60 Sekunden.</p>
-											</div>
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="sel_button btn btn-primary fifty btn-ok" data-dismiss="modal">Schliessen</button>
-										</div>
-									</div>
-								</div>
-							</div>
+                    <a href="#" aria-describedby="link-target-text" id="footer_link_help" title="Hilfe" onclick="showFooterModals('help', $(this).text())">Hilfe</a>
+                    <a href="#" aria-describedby="link-target-text" id="footer_link_imprint" title="Impressum" onclick="showFooterModals('imprint', $(this).text())">Impressum</a>
+                    <a href="#" aria-describedby="link-target-text" id="footer_link_privacy" title="Datenschutzerklärung" onclick="showFooterModals('privacy', $(this).text())">Datenschutzerklärung</a>
+                    <a href="#" aria-describedby="link-target-text" id="footer_link_accessibility" title="Erklärung zur Barrierefreiheit" onclick="showFooterModals('accessibility', $(this).text())">Erklärung zur Barrierefreiheit</a>
+                    <p id="link-target-text" class="visuallyhidden"> Öffnet im Dialogfenster.</p>
+                </nav>
 
-							<a href="#" aria-describedby="link-target-text" id="footer_link_help" title="Hilfe"
-								onclick="showFooterModals('help', $(this).text())">Hilfe</a>
-							<a href="#" aria-describedby="link-target-text" id="footer_link_imprint" title="Impressum"
-								onclick="showFooterModals('imprint', $(this).text())">Impressum</a>
-							<a href="#" aria-describedby="link-target-text" id="footer_link_privacy"
-								title="Datenschutzerklärung"
-								onclick="showFooterModals('privacy', $(this).text())">Datenschutzerklärung</a>
-							<a href="#" aria-describedby="link-target-text" id="footer_link_accessibility"
-								title="Erklärung zur Barrierefreiheit"
-								onclick="showFooterModals('accessibility', $(this).text())">Erklärung zur
-								Barrierefreiheit</a>
-							<p id="link-target-text" class="visuallyhidden"> Öffnet im Dialogfenster.</p>
-						</nav>
+                <br/><input type="hidden" id="session_reset_lifetime" value="1440" /><div tabindex="0" style="outline: none; padding-bottom: 15px;">Ihre Sitzung läuft in <span id="session_reset_input">0</span> min ab</div><nav aria-label="Sprunglink" role="navigation" tabindex="-1" style="margin-top:-10px"><p><a class="unsichtbar" href="#inhalt">Hauptregion der Seite anspringen</a></p></nav>
+            </footer>
+        </main>
 
-						<br/><input type="hidden" id="session_reset_lifetime" value="1440" />
-						<div tabindex="0" style="outline: none; padding-bottom: 15px;">Ihre Sitzung läuft in
-							<span id="session_reset_input">0</span> min ab</div>
-						<nav aria-label="Sprunglink" role="navigation" tabindex="-1" style="margin-top:-10px">
-							<p><a class="unsichtbar" href="#inhalt">Hauptregion der Seite anspringen</a></p>
-						</nav>
-					</footer>
-	</main>
-
-</body>
-
+    </body>
 </html>
